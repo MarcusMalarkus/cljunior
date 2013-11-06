@@ -1,0 +1,11 @@
+<h1>You selected category: <%= @category.name %></h1>
+<br>
+<a href="/categories/index">Go to index/home!</a>
+<br><br>
+<a href="/categories/<%= @category.id %>/posts/new">Create new post for <%= @category.name %></a>
+
+<br><br>
+
+<% @category.posts.each do |post| %>
+  <a href="/categories/<%= @category.id %>/posts/<%= post.id %>"><%= post.title %></a><br>
+<% end %>

@@ -1,0 +1,13 @@
+<h1>Category #Index</h1>
+
+<% if @categories.empty? %>
+   "No categories in here"
+<% else %>
+  <% @categories.each do |category| %>
+    <a href="/categories/<%= category.id %>"><%= category.name %></a><br><br>
+  <% end %>
+<% end %>
+
+<br><br>
+
+<a href="/categories/new">Make a new category!</a>
